@@ -36,12 +36,13 @@ Los usuarios de Validator APP son empresas que aceptan como método de pago tarj
 - Presiona el botón de verificar y si los datos ingresados son correctos se mostrará una nueva ventana con los detalles de la operación.
 
 ### Prototipo de baja fidelidad
-
-![Sitemap] (https://i.postimg.cc/N0vXRDWR/sitemap.png)
+{: style="text-align:center"}
+![sitemap](https://i.postimg.cc/N0vXRDWR/sitemap.png)
 
 ### Prototipo en Figma
+{: style="text-align:center"}
+![diseño final](https://i.postimg.cc/vmnpNYqp/Frame-1.png)
 
-![Diseño-final] (https://i.postimg.cc/vmnpNYqp/Frame-1.png)
 
 ## 4. Tecnologías empleadas :hammer:
 

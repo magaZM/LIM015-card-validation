@@ -99,6 +99,11 @@ function showDetails() {
     containerResults.style.display = 'block';
     containerResults.classList.add('modal-container');
 
+    // Crea un elemento de imagen del logo
+    // let logo = document.createElement('img');
+    // logo.src = `../images/${validator.franchiseCard(creditCardNumber)}.png`;
+    // console.log(logo)
+
     //Crea el contenido del container Resultados en un div
     const divDetails = document.createElement('div');
     divDetails.innerHTML = `
@@ -116,7 +121,7 @@ function showDetails() {
             </tr>
             <tr> 
                 <th> Marca de tarjeta:  </th>
-                <td> ${validator.franchiseCard(creditCardNumber)} </td>
+                <td>  <img class=".logo-card" src="../images/${validator.franchiseCard(creditCardNumber)}.png" alt="Logo card"> </td>
             </tr>
             <tr> 
                 <th> Validación:  </th>

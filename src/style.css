@@ -184,6 +184,10 @@ td, th {
     background: white;
 }
 
+.logo-card img {
+    width: 10px;
+    max-width: 15px;
+}
 
 /**** Footer ****/
 .footer {
