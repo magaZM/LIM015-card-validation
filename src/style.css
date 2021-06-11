@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.8rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+img {
+    width: 100%;
+}
+h1 {
+    font-size: 2rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/**** Container general ****/
+.container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+/**** Header ****/
+.header {
+    background-image: url(../images/hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 390px;
+    position: relative;
+}
+
+.container-header {
+    margin-left: 2rem;
+}
+
+.navigation {
+    background-color: rgba(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation img {
+    width: 10%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    padding: 1rem 1.5rem;
+}
+
+a:hover {
+    background-color: #03c295;
+}
+
+.title {
+    position: absolute; 
+    bottom: 15%; 
+    font-size: 1.5rem;
+    color: white;
+    line-height: 1;
+}
+
+/**** Contenedor Intro ****/
+.container-intro {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.intro-imagen {
+    flex-basis: 145%;
+    margin-right: 2rem;
+}
+
+.intro-text {
+    flex-basis: calc(50% -1rem);
+}
+
+.intro-text > p {
+    margin-top: 1rem;
+}
+
+/**** Contenedor Ventana Input ****/
+.container-input {
+    background-color: #03c295;
+    padding: 1rem;
+}
+
+.content-input {
+    width: 50%;
+    text-align: center;
+    margin: 2rem auto;
+}
+
+input {
+    display: block;
+    width: 100%;
+    margin-right: 1rem;
+    padding: .6rem;
+    border-radius: 7px;
+    border: none;
+}
+
+.btn {
+    display: block;
+    width: 50%;
+    margin: 1rem auto 0 auto;
+    padding: .7rem;
+    border: solid 2px white;
+    cursor: pointer;
+    color: white;
+    font-weight: 900;
+    background: #03c295;
+    border-radius: 30px;
+    text-transform: uppercase;
+}
+
+/**** Contenedor Ventana Resultados ****/
+.alert {
+    padding: .4rem 10rem;
+    margin: 1rem;
+    border-radius: 7px;
+}
+
+.success {
+    border: solid 1px green;
+    color: green;
+}
+
+.error {
+    border: solid 1px rgb(250, 102, 102);
+    color: rgb(252, 27, 27);
+}
+
+table {
+    margin: 0 auto;
+    line-height: 2.5rem;
+    padding-bottom: 1rem;
+}
+td, th {
+    text-align: justify;
+    margin-right: 1rem;
+    padding: .5rem;
+}
+
+/* modal container  */
+.modal-container {
+    background: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    position: fixed;
+    pointer-events: none;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%
+}
+
+.modal {
+    margin: 10% 30%;
+    background-color:  white;
+    border: solid 1px rgb(194, 192, 192);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 1);
+    padding-bottom: 1rem;
+    border-radius: 7px;
+    width: 600px;
+    max-width: 100%;
+    padding: 30px 50px;
+}
+
+.show {
+    pointer-events: auto;
+    opacity: 1;
+    background: white;
+}
+
+
+/**** Footer ****/
+.footer {
+    background: rgba(0, 0, 0, 0.733);
+    color: rgb(194, 192, 192);
+}
+
+.footer nav a {
+    display: block;
+    text-align: center;
+    padding: 0;
+    color: rgb(194, 192, 192);
+}
+
+.footer nav a:hover {
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+/**** Boton desabilitado ***/
+.disabled {
+    background-color: rgb(194, 192, 192);
+    cursor: help;
+    border: none;
+}

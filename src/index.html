@@ -6,9 +6,69 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <header class="header">
+      <section class="navigation">
+        <img class="logo container-header" src="../images/logo.png"  alt="Logo Validator" width="130px">
+        <nav>
+          <a href="#">Nosotros</a>
+          <a href="#">Contacto</a>
+        </nav>
+      </section>
+
+      <section class="title container container-header">
+        <h1>Validator APP</h1>
+        <p>Comprueba si tu tarjeta es válida en pocos pasos</p>
+      </section>
+
+    </header>
+
+    <main>
+
+      <!-- Ventana de Intro -->
+      <section class="container-intro container ">
+        <section class="intro-imagen">
+          <img src="../images/intro.jpg" alt="verificando tarjeta de crédito">
+        </section>
+
+       <section class="intro-text">
+          <h2 class="text-center"> Validador de tarjeta de Crédito/Débito </h2>
+          <p> A través de esa aplicación podrás verificar si los números de tarjeta de crédito o débito suministrados son válidos de acuerdo al Algoritmo de Luhn. Dicho algoritmo, también es conocido como algoritmo de módulo 10, es un método de suma de verificación que se utiliza para validar números de identificación; tales como el IMEI de los celulares, tarjetas de crédito, etc. </p>
+          
+          <p> Para su seguridad le informamos que esta herramienta no almacena ninguna información de los datos ingresados. Además es importante mencionar que podrá verificar los números números de tarjetas de las siguientes entidades financieras: VISA, MASTERCARD, AMERICAN EXPRESS, DISCOVER, MAESTRO, DINERS CLUB, etc. </p>
+
+          <p> Para validar un número de tarjeta de crédito solo ingresa los datos que se solicitan a continuación y presiona en el botón de validar. Inmediatamente obtendrá el resultado con los detalles de su tarjeta. </p>
+        </section>
+
+      </section> <!-- Cierre de ventana Intro -->
+
+      <!-- Ventana de Input -->
+        <section class="container-input">
+          <h2 class="text-center"> Instrucciones de uso: </h2>
+          <ol class="content-input">
+            <li>Ingrese los números de su tarjeta de Crédito o Débito en la casilla correspondiente.</li>
+            <li>Verifique que los datos ingresados son correctos y luego presione el botón verificar.</li>
+            <li>Espere unos segundos y le indicaremos el resultado de la operación.</li>
+          </ol>
+          <section class="content-input">
+            <label for="number"></label>
+            <input type="text" id="number" name="number" placeholder="1234 5678 9123 4567" maxlength="19">
+            <button type="submit" class="btn" id="verify">Verificar</button>
+          </section>
+        </section> <!-- Cierre de Ventana de Input -->
+
+      <!-- Ventana de Resultados -->
+      <section class="container-results">
+      </section>
+    </main>
+
+    <footer class="footer">
+      <nav>
+        <a href="#">Nosotros</a>
+        <a href="#">Contacto</a>
+      </nav>
+      <p class="text-center"> &#169; Todos los Derechos Reservados Validator App  2021. </p>
+    </footer>
+
     <script src="index.js" type="module"></script>
   </body>
 </html>
