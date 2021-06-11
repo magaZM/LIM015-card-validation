@@ -54,20 +54,21 @@ const validator = {
   franchiseCard: (creditCardNumber) => {
 
     const regExpFranchise = {
-      Maestro: /^(5018|5020|5038|5612|5893|6304|6759|6761|6762|6763|0604|6390)\d+$/,
-      Visa: /^4[0-9]{12}(?:[0-9]{3})?$/,
-      Mastercard: /^5[1-5][0-9]{14}$/,
       'American Express': /^3[47][0-9]{13}$/,
       Diners: /^3(?:0[0-5]|[68][0-9])[0-9]{11}$/,
       Discover: /^6(?:011|5[0-9]{2})[0-9]{12}$/,
-      Jcb: /^(?:2131|1800|35\d{3})\d{11}$/
+      Jcb: /^(?:2131|1800|35\d{3})\d{11}$/,
+      Maestro: /^(5018|5020|5038|5612|5893|6304|6759|6761|6762|6763|0604|6390)\d+$/,
+      Visa: /^4[0-9]{12}(?:[0-9]{3})?$/,
+      Mastercard: /^5[1-5][0-9]\d+$/,
     }
 
     for(let key in regExpFranchise) {
-
-      return (regExpFranchise[key].test(creditCardNumber) === false )? 'Marca no existe ' : key;
-
+      if  ( regExpFranchise[key].test(creditCardNumber) ) {
+        return key;
+      }
     }
+    return 'Marca no encontrada';
   }
 };
 

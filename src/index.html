@@ -32,7 +32,7 @@
 
        <section class="intro-text">
           <h2 class="text-center"> Validador de tarjeta de Crédito/Débito </h2>
-          <p> A través de esa aplicación podrás verificar si los números de tarjeta de crédito o débito suministrados son válidos de acuerdo al Algoritmo de Luhn. Dicho algoritmo, también es conocido como algoritmo de módulo 10, es un método de suma de verificación que se utiliza para validar números de identificación; tales como el IMEI de los celulares, tarjetas de crédito, etc. </p>
+          <p> A través de esa aplicación podrás verificar si los números de tarjeta de crédito o débito suministrados son válidos de acuerdo al Algoritmo de Luhn. Dicho algoritmo, es un método de suma de verificación que se utiliza para validar números de identificación; tales como el IMEI de los celulares, tarjetas de crédito, etc. </p>
           
           <p> Para su seguridad le informamos que esta herramienta no almacena ninguna información de los datos ingresados. Además es importante mencionar que podrá verificar los números números de tarjetas de las siguientes entidades financieras: VISA, MASTERCARD, AMERICAN EXPRESS, DISCOVER, MAESTRO, DINERS CLUB, etc. </p>
 
@@ -43,15 +43,32 @@
 
       <!-- Ventana de Input -->
         <section class="container-input">
-          <h2 class="text-center"> Instrucciones de uso: </h2>
-          <ol class="content-input">
-            <li>Ingrese los números de su tarjeta de Crédito o Débito en la casilla correspondiente.</li>
-            <li>Verifique que los datos ingresados son correctos y luego presione el botón verificar.</li>
-            <li>Espere unos segundos y le indicaremos el resultado de la operación.</li>
-          </ol>
+          <table>
+            <thead>
+                <tr> 
+                    <th colspan="2" class="text-center"> Instrucciones de uso: </th> 
+                </tr>
+            </thead>
+    
+            <tbody>
+                <tr> 
+                    <th> 1. </th>
+                    <td>Ingrese los números de su tarjeta de Crédito o Débito en la casilla correspondiente.</td>
+                </tr>
+                <tr> 
+                    <th> 2.  </th>
+                    <td>Verifique que los datos ingresados son correctos y luego presione el botón verificar.</td>
+                </tr>
+                <tr> 
+                    <th> 3.  </th>
+                    <td>Espere unos segundos y le aparecerá una ventana con el resultado de la operación.</td>
+                </tr>
+            </tbody>
+        
+        </table>
           <section class="content-input">
             <label for="number"></label>
-            <input type="text" id="number" name="number" placeholder="1234 5678 9123 4567" maxlength="19">
+            <input type="text" id="number" name="number" placeholder="1234 5678 9012 3456" maxlength="19">
             <button type="submit" class="btn" id="verify">Verificar</button>
           </section>
         </section> <!-- Cierre de Ventana de Input -->

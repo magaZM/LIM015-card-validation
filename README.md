@@ -31,14 +31,17 @@ Los usuarios de Validator APP son empresas que aceptan como método de pago tarj
 *Yo como usuario quiero:* Obtener mensaje con la información detallada.
 
 ## 3. Diseño :sparkles:
+### Uso de la aplicación  
+- Se presenta una ventana con un input para ingresar los números de tarjeta de Crédito o Débito a validar.
+- Presiona el botón de verificar y si los datos ingresados son correctos se mostrará una nueva ventana con los detalles de la operación.
 
 ### Prototipo de baja fidelidad
 
-![Sitemap] (./sitemap.png)
+![Sitemap] (https://i.postimg.cc/N0vXRDWR/sitemap.png)
 
 ### Prototipo en Figma
 
-![Diseño-final] (./images/Group1.png)
+![Diseño-final] (https://i.postimg.cc/vmnpNYqp/Frame-1.png)
 
 ## 4. Tecnologías empleadas :hammer:
 
@@ -53,15 +56,36 @@ Los usuarios de Validator APP son empresas que aceptan como método de pago tarj
 > - `function disabledBtn()` Para desabilitar el botón y que el usuario instroduzca los datos correctamente.
 > - `isValid()` Para aplicar el algoritmo luhn en el número de tarjeta introducido por el usuario.
 > - `maskify()` Para ocultar los números de la tarjeta a exepción de los últimos 4 números.
+> - `franchiseCard()` Para mostrar a qué franquicia pertenece la tarjeta.
+
 
 - [ ]  [Jest:](https://jestjs.io/docs/es-ES/getting-started) Framework para realizar los testing unitarios.
 
 - [ ]  [Eslint:](https://jestjs.io/docs/es-ES/getting-started) Herramienta de linting para analizar el codigo en busca de errores.
 
-## 4.Testing :wrench:
+## 5.Testing :wrench:
+Se realizaron pruebas de validación con tarjetas de crédito y débito de diferentes marcas que permitieron conocer la validez o no de las mismas así como la franquicia a la cual pertenecen de la siguiente manera:
 
+En el código siguiente verificamos un número de tarjeta válido el cual debería retornar <span style='color:blue; font-family:Cambria' >true</span>.
+~~~
+    it('debería retornar true para "4083952015263"', () => {
+      expect(validator.isValid('4083952015263')).toBe(true);
+    });
+~~~
+En un caso contrario al anterior, un número de tarjeta como el que sigue a continuación debería retornar <span style='color:red; font-family:Cambria'>false</span>.
+~~~
+    it('debería retornar false para "1234567890"', () => {
+      expect(validator.isValid("1234567890")).toBe(false);
+    });
+~~~
+Para verificar el tipo de marca de tarjeta de crédito realizamos la siguiente comprobación para diveros tipos de marca:
+~~~
+    it('debería retornar "Visa" para "4557880555458284"', () => {
+      expect(validator.franchiseCard('4557880555458284')).toBe('Visa');
+    });
+~~~
 
-## 5. Autores
+## 6. Autores :information_desk_person:
 - Aura Margarita Zambrano Méndez :information_desk_person:  
 Cohorte 15 de Lima en Laboratoria :hearts:
 ---

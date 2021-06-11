@@ -55,5 +55,17 @@ describe('validator', () => {
       expect(validator.franchiseCard('4557880555458284')).toBe('Visa');
     });
 
+    it('debería retornar "Maestro" para "501878200061218154"', () => {
+      expect(validator.franchiseCard('501878200061218154')).toBe('Maestro');
+    });
+
+    it('debería retornar "Mastercard" para "5401427822903158"', () => {
+      expect(validator.franchiseCard('5401427822903158')).toBe('Mastercard');
+    });
+
+    it('debería retornar "Marca no encontrada" para "111111111111111"', () => {
+      expect(validator.franchiseCard('111111111111111')).toBe('Marca no encontrada');
+    });
+
   })
 });
