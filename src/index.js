@@ -34,7 +34,7 @@ function validateForm() {
     const regEXp = /\D|\s$/;
 
     if (regEXp.test(creditCardNumber)){
-        inputNumber.value = '';
+        inputNumber.value = ''; // limpia los valores ingresados en el input 
         showAlert('Ingresa solo números por favor');
     }
     else {
@@ -79,7 +79,6 @@ function showAlert(message) {
     const divAlert = document.createElement('div');
     divAlert.classList.add('text-center');
     
-
     if (validity === 'Válida'){
         icon = '<svg class="w-6 h-6" fill="none" stroke="currentColor" width="16px" color="green"  viewBox="5 5 15 15" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>'
         divAlert.classList.add('success', 'alert')
@@ -98,11 +97,6 @@ function showDetails() {
     // Muestra el container de resultados y agrega clase
     containerResults.style.display = 'block';
     containerResults.classList.add('modal-container');
-
-    // Crea un elemento de imagen del logo
-    // let logo = document.createElement('img');
-    // logo.src = `../images/${validator.franchiseCard(creditCardNumber)}.png`;
-    // console.log(logo)
 
     //Crea el contenido del container Resultados en un div
     const divDetails = document.createElement('div');
@@ -132,8 +126,8 @@ function showDetails() {
     </table>
     <button type="submit" class="btn" id="goBack" >Reiniciar</button>
     `
-    divDetails.classList.add('show', 'modal')
-    containerResults.appendChild(divDetails);
+    divDetails.classList.add('show', 'modal') // Agrega la clase modal 
+    containerResults.appendChild(divDetails); // Inserta al HTML
 
     // Agrega evento al botón de goBack para volver a la ventana principal
     const btnGoBack = document.querySelector('#goBack');
@@ -147,5 +141,6 @@ function showDetails() {
         containerResults.style.display = 'none';
         //Elimina mensajes de alerta
         deleteAlert()
+        startApp()
     })
 }
