@@ -52,9 +52,9 @@ const validator = {
   }, 
 
   franchiseCard: (creditCardNumber) => {
-
+    // Objeto con expresiones regulares para cada tarjeta 
     const regExpFranchise = {
-      'American Express': /^3[47][0-9]{13}$/,
+      amex: /^3[47][0-9]{13}$/,
       diners: /^3(?:0[0-5]|[68][0-9])[0-9]{11}$/,
       discover: /^6(?:011|5[0-9]{2})[0-9]{12}$/,
       jcb: /^(?:2131|1800|35\d{3})\d{11}$/,
@@ -68,7 +68,7 @@ const validator = {
         return key;
       }
     }
-    return 'Marca no encontrada';
+    return 'otro';
   }
 };
 
