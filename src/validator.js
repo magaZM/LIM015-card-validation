@@ -1,36 +1,27 @@
-export let validity;
-
 const validator = {
 
   isValid: (creditCardNumber) => {
-    
-    const convertToArray = Array.from(creditCardNumber).reverse();
 
     let sum = 0;
+    const convertToArray = Array.from(creditCardNumber).reverse();
 
-    for(let index = 1; index < convertToArray.length; index += 2){
-    
-      const multiplyPairs = convertToArray[index] * 2;
+    for(let index = 1; index < convertToArray.length; index += 2){ // Buscar posición par
 
-      if (multiplyPairs >= 10) {
-        const convertToString = multiplyPairs.toString();
+      const multiplyEvens = Number(convertToArray[index]) * 2;
+
+      if (multiplyEvens >= 10) {
+        const convertToString = multiplyEvens.toString(); // Para manipular cada dígito
         const firstPosition = convertToString[0];
         const lastPosition = convertToString[1];
         convertToArray[index] = Number(firstPosition) + Number(lastPosition);
       } else {
-        convertToArray[index] = multiplyPairs;
+        convertToArray[index] = multiplyEvens;
       }
     }
 
     convertToArray.forEach(element => sum = sum + Number(element))
 
-    if(sum % 10 === 0){
-      validity = 'Válida';
-      return true;
-    }else {
-      validity = 'Inválida';
-      return false;
-    }
+    return (sum % 10 === 0) ? true : false;
   },
 
   maskify: (creditCardNumber) =>  {
@@ -38,9 +29,7 @@ const validator = {
     const convertCreditCardNumberToArray = Array.from(creditCardNumber);
     const regExpArr = /\d$/g;
     for(let index = 0; index < convertCreditCardNumberToArray.length - 4; index++){
-      
       convertCreditCardNumberToArray[index] = convertCreditCardNumberToArray[index].replace(regExpArr, '#');
-
     }
   
     let newCreditCardNumber = convertCreditCardNumberToArray.toString();
