@@ -1,6 +1,5 @@
 // Importamos el objeto `validator`, que contiene las funciones `isValid` y `maskify`
 import validator from './validator.js';
-import { validity } from './validator.js';
 
 // Elementos HTML
 const btnVerify = document.querySelector('.btn');
@@ -11,6 +10,7 @@ const containerResults = document.querySelector('.container-results');
 // Variables Globales
 let icon;
 let creditCardNumber;
+let validity;
 
 // Eventos 
 document.addEventListener('DOMContentLoaded', startApp);
@@ -42,9 +42,11 @@ function validateForm() {
         validator.maskify(creditCardNumber);
 
         if (validator.isValid(creditCardNumber)){
+            validity = 'Válida';
             showAlert('Tarjeta Válida');
             showDetails();
         } else {
+            validity = 'Inválida';
             showAlert('Tarjeta Inválida');
             showDetails();
         }
