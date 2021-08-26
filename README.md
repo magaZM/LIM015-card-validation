@@ -22,13 +22,13 @@ Los usuarios de Validator APP son empresas que aceptan como método de pago tarj
 - [ ] **Historias de usuario**
 
 > **Historia 1**  
-*Yo como usuario quiero:* Obtener información sobre cómo usar la APP.
+*Yo como usuario quiero:* Obtener información sobre cómo usar la APP para realizar el proceso rápidamente.
 
 > **Historia 2**  
-*Yo como usuario quiero:* Ingresar dato de la tarjeta a validar.
+*Yo como usuario quiero:* Ingresar datos de la tarjeta para obtener información sobre su validez.
 
 > **Historia 3**  
-*Yo como usuario quiero:* Obtener mensaje con la información detallada.
+*Yo como usuario quiero:* Obtener un mensaje con la información detallada para conocer el estatus de la tarjeta.
 
 ## 3. Diseño :sparkles:
 ### Uso de la aplicación  
